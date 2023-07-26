@@ -13,4 +13,4 @@ steps:
   # logsBucket: 'cloud_build-927'
 options:
 logsBucket: 'cloud_build-927'
-logging: CLOUD_LOGGING_ONLY
+logging: GCS_ONLY
