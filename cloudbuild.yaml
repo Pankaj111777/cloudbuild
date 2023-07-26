@@ -12,5 +12,5 @@ steps:
   args: ['run', 'deploy', '${_SERVICE_NAME}', '--image', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:${SHORT_SHA}', '--region', 'us-central1', '--platform', 'managed', "--allow-unauthenticated"]
   # logsBucket: 'cloud_build-927'
 options:
-logsBucket: 'cloud_build-927'
+#logsBucket: 'cloud_build-927'
 logging: GCS_ONLY
