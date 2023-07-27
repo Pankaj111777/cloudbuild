@@ -22,7 +22,7 @@
 # }
 terraform {
   backend "gcs" {
-    bucket  = "tf-dbt-state"
+    bucket  = "tf-git-dbtstate"
     prefix  = "terraform/state"
   }
 }
