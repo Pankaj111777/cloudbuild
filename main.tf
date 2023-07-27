@@ -35,7 +35,7 @@ resource "dbt_cloud_job" "apply" {
   generate_docs        = false
   is_active            = true
   name                 = "apply"
-  num_threads          = 4 #217945 == "217945" ? 5 : 6
+  num_threads          = 2 #217945 == "217945" ? 5 : 6
   project_id           = 269764
   schedule_days = [4, 6]
   schedule_type = "days_of_week"
@@ -59,7 +59,7 @@ resource "dbt_cloud_job" "test01" {
   generate_docs        = false
   is_active            = true
   name                 = "test01"
-  num_threads          = 4
+  num_threads          = 3
   project_id           = 269764
   schedule_days = [2, 3, 5]
   schedule_type = "days_of_week"
@@ -84,7 +84,7 @@ resource "dbt_cloud_job" "welcome" {
   generate_docs        = false
   is_active            = true
   name                 = "welcome"
-  num_threads          = 4
+  num_threads          = 2
   project_id           = 269764
   schedule_cron = " 30 2 * * * "
   schedule_type = "custom_cron"
