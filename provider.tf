@@ -24,7 +24,7 @@ terraform {
 
 provider "dbt" {
   account_id  = 184401
-  token    = "dbtc_CJXpZCAIsNEB25E8xbv60UGNKdSKV9iCV0jN-7W-Lqdi0ChH34"
+  token    = "dbtc_rJ72GQshk83O-PMML9TM7Pixn3s3eWnpEQZSs-b9TPG1JO-F5M"
 }
 
 # data "dbt_cloud_project" "dbt_cloud_project" {
