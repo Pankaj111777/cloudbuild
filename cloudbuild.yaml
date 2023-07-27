@@ -1,27 +1,31 @@
 steps:
 - id: 'tf init'
- name: 'hashicorp/terraform:0.14.3'
-entrypoint: 'sh'
-args:
-- '-c'
-- |
- terraform init || exit 1
+  name: 'hashicorp/terraform:0.14.3'
+  entrypoint: 'sh'
+  args:
+  - '-c'
+  - |
+      terraform init || exit 1
 
  
 
 - id: 'tf plan'
-name: 'hashicorp/terraform:0.14.3'
-entrypoint: 'sh'
-args:
-- '-c'
-- |
-terraform plan || exit 1
+  name: 'hashicorp/terraform:0.14.3'
+  entrypoint: 'sh'
+  args:
+  - '-c'
+  - |
+      terraform refresh 
+      terraform plan || exit 1
 
  
-- id: 'tf apply'
-name: 'hashicorp/terraform:0.14.3'
-entrypoint: 'sh'
-args:
-- '-c'
-- |
-terraform apply -auto-approve  || exit 1
+
+ 
+
+# - id: 'tf apply'
+#   name: 'hashicorp/terraform:0.14.3'
+#   entrypoint: 'sh'
+#   args:
+#   - '-c'
+#   - |
+#       terraform apply -auto-approve  || exit 1
